@@ -1,0 +1,200 @@
+
+/* Remove Browser Styling */
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set Colour Pallet */
+:root {
+  --pale-pink: #E9D8F2;
+  --pink: #F28BC8;
+  --grey: #D3D3D3;
+  --black: #1B2827;
+  --white: #fff;
+}
+
+/* base style */
+
+html{
+  display: grid;
+}
+
+body {
+  background-color: var(--pale-pink);
+  font-family: "Times New Roman", serif;
+  color: var(--black);
+}
+
+/* text styling */
+
+h1 {
+  font-size: 28pt;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 4vh auto 2vh auto;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  font-size: 12pt;
+}
+
+.highlight {
+  background-color: var(--pink);
+  padding: 0 0.5rem;
+}
+
+/* Accessability Styling */
+
+.visually-hidden {
+  position: absolute;
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0,0,0,0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+/* grid layout */
+
+.intro-wrapper {
+  display: grid;
+  place-items: center center;
+}
+
+.portfolio-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center center;
+  max-width: 800px;
+  margin: 0 auto 0 auto;
+}
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2vh;
+  margin: 0 auto 0 auto;
+  position: relative;
+}
+
+/* class styling */
+
+  /* Section One (Intro) */
+
+  .speachbubble {
+    background-color: var(--white);
+    max-width: 600px;
+    min-width: 200px;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  /* Section Two (Portfolio) */
+
+  .portfolio-piece {
+    width: 150px;
+    height: 150px;
+    background: var(--grey);
+    border: 25px solid var(--white);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .portfolio-piece h3 {
+    text-align: center;
+    rotate: -30deg;
+  }
+
+  /* Section Three (About) */
+
+  .about-wrapper {
+    margin: 0 auto 2vh auto;
+    max-width: 860px;
+  }
+
+  .white-box {
+    background-color: var(--white);
+
+  }
+
+  .left-box {
+    min-width: 366px;
+    max-width: 400px;
+  }
+
+  .right-box {
+    min-width: 442px;
+  }
+
+  .white-box h3 {
+    padding-top: 1vh;
+    margin-bottom: 1vh;
+  }
+
+  .white-box p {
+    margin: 0 auto 1vh auto;
+    padding: 0 40px;
+    text-align: justify;
+  }
+
+    /* table styling */
+
+  table {
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+
+  td {
+    text-align: left;
+    padding: 0.5vh;
+  }
+
+  .contact {
+    position: absolute;
+    bottom: 0;
+  }
+
+/* asset styling */
+
+/* tablet styling */
+
+  @media (max-width:880px) {
+        .about-wrapper {
+          grid-template-columns: repeat(auto-fill, 100%);
+        }
+
+        .white-box, .left-box, .right-box {
+          width: 450px;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: none;
+        }
+
+        .education {
+          position: static;
+        }
+
+        .education h3 {
+          margin-top: 2vh;
+        }
+
+        .contact {
+          position: static;
+          margin-top: 2vh;
+        }
+      }
+
+/* phone styling */
